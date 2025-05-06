@@ -1,2 +1,2 @@
 # AstroProject
-Astro + Svelte
+A Project using Astro.build
