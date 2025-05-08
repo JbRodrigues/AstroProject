@@ -1,6 +1,7 @@
 ---
-import MainLayout from '../layouts/Layout.astro';
-import ProjectCard from '../components/ProjectCard.svelte';
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.svelte";
+import Hero from "../components/Hero.svelte";
 ---
 
 <MainLayout title="Meu Portifolio">
@@ -9,19 +10,20 @@ import ProjectCard from '../components/ProjectCard.svelte';
     <ProjectCard
       title="Projeto 1"
       description="Um projeto incrível construído com Astro e Svelte."
-      image="/images/project1.jpg"
+      image="/"
       client:load
     />
     <ProjectCard
       title="Projeto 2"
       description="Outro projeto fantástico com interatividade."
-      image="/images/project2.jpg"
+      image="/"
       client:load
     />
   </section>
+  <section class="Hero">
+    <Hero client:load />
+  </section>
 </MainLayout>
-
-
 
 <style>
   .projects {
