@@ -15,7 +15,7 @@
 </script>
 
 <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
-  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Entre em Contato</h2>
+  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center text-4xl text-red-500">Entre em Contato</h2>
   <div class="bg-white shadow-lg rounded-lg p-6">
     {#if status}
       <p class="text-green-600 mb-4">{status}</p>
