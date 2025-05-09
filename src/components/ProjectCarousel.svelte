@@ -4,7 +4,7 @@
     {
       title: 'Projeto 1',
       description: 'Um site moderno construído com Astro.',
-      image: '/images/project1.jpg',
+      image: '../assets/astro.svg',
       link: 'https://example.com',
     },
     {

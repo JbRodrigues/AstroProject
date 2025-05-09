@@ -1,29 +1,17 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Hero from "../components/Hero.svelte";
-import About from "../components/About.astro";
-import ContactForm from "../components/ContactForm.svelte";
-import Header from "../components/Header.astro";
-import ProjectCarousel from "../components/ProjectCarousel.svelte";
-import Footer from "../components/Footer.astro";
-import ProjectCardA from "../components/ProjectCard.astro";
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import ProjectCarousel from '../components/ProjectCarousel.svelte';
+import ContactForm from '../components/ContactForm.svelte';
+import Footer from '../components/Footer.astro';
 ---
-
-<MainLayout title="Meu Portifolio">
+<MainLayout title="Meu Portfólio">
   <Header />
-  <Hero client:load />
+  <Hero />
   <About />
-  <ProjectCardA />
   <ProjectCarousel client:load />
   <ContactForm client:load />
   <Footer />
 </MainLayout>
-
-<style>
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
-</style>

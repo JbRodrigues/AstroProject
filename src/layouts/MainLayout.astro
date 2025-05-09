@@ -1,64 +1,15 @@
 ---
 const { title } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <h1>Meu Portfólio</h1>
-        <ul>
-          <li><a href="/">Início</a></li>
-          <li><a href="/projetos">Projetos</a></li>
-          <li><a href="/contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <slot /> <!-- O conteúdo da página será inserido aqui -->
-    </main>
-    <footer>
-      <p>&copy; 2025 - Seu Nome. Todos os direitos reservados.</p>
-    </footer>
+    <slot />
   </body>
 </html>
-
-<style>
-  header {
-    background-color: #0070f3;
-    color: white;
-    padding: 1rem;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-  }
-</style>
