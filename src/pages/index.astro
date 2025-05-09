@@ -1,28 +1,22 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import ProjectCard from "../components/ProjectCard.svelte";
 import Hero from "../components/Hero.svelte";
+import About from "../components/About.astro";
+import ContactForm from "../components/ContactForm.svelte";
+import Header from "../components/Header.astro";
+import ProjectCarousel from "../components/ProjectCarousel.svelte";
+import Footer from "../components/Footer.astro";
+import ProjectCardA from "../components/ProjectCard.astro";
 ---
 
 <MainLayout title="Meu Portifolio">
-  <h1>Bem-vindo ao meu portfólio</h1>
-  <section class="projects">
-    <ProjectCard
-      title="Projeto 1"
-      description="Um projeto incrível construído com Astro e Svelte."
-      image="/"
-      client:load
-    />
-    <ProjectCard
-      title="Projeto 2"
-      description="Outro projeto fantástico com interatividade."
-      image="/"
-      client:load
-    />
-  </section>
-  <section class="Hero">
-    <Hero client:load />
-  </section>
+  <Header />
+  <Hero client:load />
+  <About />
+  <ProjectCardA />
+  <ProjectCarousel client:load />
+  <ContactForm client:load />
+  <Footer />
 </MainLayout>
 
 <style>

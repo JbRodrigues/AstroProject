@@ -1,43 +1,11 @@
-<script>
-  import { fade } from 'svelte/transition';
-  let count = 0;
-  let showMessage = false;
-
-  function handleClick() {
-    count += 1;
-    showMessage = true;
-    setTimeout(() => (showMessage = false), 2000);
-  }
-</script>
-
-<section class="hero">
-  <h3>Componente Interativo com Svelte</h3>
-  <p>Você clicou {count} vezes.</p>
-  {#if showMessage}
-    <p transition:fade={{ duration: 500 }}>Clicou!</p>
-  {/if}
-  <button on:click={handleClick}>Clique Aqui</button>
+---
+---
+<section id="hero" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4">Olá, eu sou [Seu Nome]</h2>
+    <p class="text-xl mb-6">Desenvolvedor Web | Criador de Soluções Digitais</p>
+    <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">
+      Entre em Contato
+    </a>
+  </div>
 </section>
-
-<style>
-  .hero {
-    background-color: #f0f0f0;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    color: #2c3e50;
-  }
-  button {
-    background-color: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #2980b9;
-  }
-</style>
